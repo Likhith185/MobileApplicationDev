@@ -1,0 +1,23 @@
+Yes, if you restrict your server to only support TLS 1.2 and TLS 1.3, then clients that only support older protocols (like TLS 1.0 or TLS 1.1) will not be able to establish a secure connection to your site. Here’s how this affects users:
+
+1. Clients with Older Protocols
+
+	•	If a user’s browser or application does not support TLS 1.2 or TLS 1.3, they will see an error message stating that a secure connection could not be established. This could look like:
+	•	In Browsers: Messages like “Secure Connection Failed,” “SSL Protocol Error,” or “This site can’t provide a secure connection.”
+	•	In Applications: Errors indicating an inability to establish SSL/TLS, such as “Handshake Failure” or “Protocol Version Not Supported.”
+	•	As a result, users on outdated browsers or operating systems that only support TLS 1.0 or TLS 1.1 will not be able to load your site.
+
+2. Improved Security for Compatible Clients
+
+	•	Modern clients (most recent versions of Chrome, Firefox, Safari, Edge, etc.) support TLS 1.2 and TLS 1.3 by default, so they’ll have no issues connecting securely.
+	•	By restricting to only TLS 1.2 and TLS 1.3, you’re ensuring that all connections to your site use more secure protocols and cipher suites. This reduces the risk of vulnerabilities associated with older protocols.
+
+3. Compatibility Considerations
+
+	•	Most modern browsers and devices already support TLS 1.2 and TLS 1.3, so the impact on typical users is minimal. However, if your site has a large user base that relies on outdated technology (such as old versions of Internet Explorer or older Android devices), you might need to weigh compatibility with security.
+
+4. Fallback Options
+
+	•	For most sites, it’s best to prioritize security and restrict to TLS 1.2 and TLS 1.3. If you do need broader compatibility, you might keep TLS 1.0 or TLS 1.1 enabled temporarily but should disable weak ciphers within those protocols to minimize risk.
+
+In summary, restricting protocols will make your site more secure by preventing insecure connections, but older clients that only support TLS 1.0 or 1.1 won’t be able to access it. This can be a positive security measure, as it encourages users to upgrade to more secure, modern software.
